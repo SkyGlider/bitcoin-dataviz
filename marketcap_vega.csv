@@ -1,4 +1,3 @@
-name,symbol,price,type
 Bitcoin,BTC,57244.76,coin
 Bitcoin,BTC,57244.76,coin
 Bitcoin,BTC,57244.76,coin
@@ -155,6 +154,12 @@ Cardano,ADA,2.11,coin
 Cardano,ADA,2.11,coin
 Cardano,ADA,2.11,coin
 Cardano,ADA,2.11,coin
+Tether,USDT,1.00,coin
+Tether,USDT,1.00,coin
+Tether,USDT,1.00,coin
+Tether,USDT,1.00,coin
+Tether,USDT,1.00,coin
+Tether,USDT,1.00,coin
 Tether,USDT,1.00,coin
 Binance Coin,BNB,402.18,coin
 Binance Coin,BNB,402.18,coin
