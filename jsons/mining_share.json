@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "https://raw.githubusercontent.com/SkyGlider/FIT3179-A2/main/datasets/miners_county.csv"},
-  "width": 1000, "height": 500,
+  "width": 1050, "height": 500,
   "mark": "area",
   "encoding": {
     "x": {
