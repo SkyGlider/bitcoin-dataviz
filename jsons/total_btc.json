@@ -9,8 +9,8 @@
     "x": {"timeUnit": "year", "field": "Timestamp","axis":{"grid": false,"tickCount":10},"title":"Year"},
     "y": {"field": "total-bitcoins", "aggregate": "min","axis":{"grid": false,"tickCount":10},"title":"Total BTC in circulation"},
     "tooltip":[
-      {"timeUnit":"year", "field": "Timestamp"},
-      {"field": "total-bitcoins", "aggregate": "min","format":","}
+      {"timeUnit":"year", "field": "Timestamp","title":"Year"},
+      {"field": "total-bitcoins", "aggregate": "min","format":",","title":"Total BTC in Circulation"}
     ]
   },
   "layer":[
