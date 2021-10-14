@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Google's stock price over time.",
-  "height":300,
+  "height":400,
   "width":500,
   "title":"Total Bitcoin in Circulation Over The Years",
   "data": {"url": "https://raw.githubusercontent.com/SkyGlider/FIT3179-A2/main/datasets/total-bitcoins.csv"},
