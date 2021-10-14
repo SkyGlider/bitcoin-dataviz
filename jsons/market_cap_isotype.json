@@ -31,18 +31,21 @@
       },
       {
         "field": "marketcap",
-        "type": "nominal",
-        "title": "Market Cap (Oct 2021)"
+        "type": "quantitative",
+        "title": "Market Cap (Oct 2021)",
+        "format":","
       },
       {
         "field": "supply",
-        "type": "nominal",
-        "title": "Total Supply (Oct 2021)"
+        "type": "quantitative",
+        "title": "Total Supply (Oct 2021)",
+        "format":","
       },
       {
         "field": "price",
-        "type": "nominal",
-        "title": "Price (Oct 2021)"
+        "type": "quantitative",
+        "title": "Price (Oct 2021)",
+        "format":","
       }
     ]
   },

@@ -16,7 +16,7 @@
     "color": {"field":"country", "scale":{"scheme": "spectral"}},
     "tooltip":[
       {
-        "timeUnit": "yearmonth", 
+        "timeUnit": "yearmonth",
         "field": "date",
         "title":"Month"
       },
@@ -26,7 +26,8 @@
       },
       {
         "field": "monthly_absolute_hashrate_EH/S",
-        "title":"Hash Rate (EH/s)"
+        "title":"Hash Rate (EH/s)",
+        "format":","
       },
       {
         "field": "monthly_hashrate_%",

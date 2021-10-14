@@ -8,7 +8,7 @@
         "line" :{"color":"orange"},
         "color":"gold"
       },
-      "width": 350, 
+      "width": 350,
       "height": 300,
       "encoding": {
         "x": {
@@ -27,12 +27,12 @@
         },
         "tooltip":[
           {
-            "timeUnit": "yearmonth", 
+            "timeUnit": "yearmonth",
             "field": "Timestamp",
             "title":"Month"
           },
           {
-            "aggregate": "average", 
+            "aggregate": "average",
             "field": "cost-per-transaction",
             "title":"Cost Per Transaction (USD)"
           }
@@ -47,7 +47,7 @@
         "line" :{"color":"darkorange"},
         "color":"orange"
       },
-      "width": 350, 
+      "width": 350,
       "height": 300,
       "encoding": {
         "x": {
@@ -66,14 +66,15 @@
         },
         "tooltip":[
           {
-            "timeUnit": "yearmonth", 
+            "timeUnit": "yearmonth",
             "field": "Timestamp",
             "title":"Month"
           },
           {
-            "aggregate": "sum", 
+            "aggregate": "sum",
             "field": "miners-revenue",
-            "title":"Total Miner's Revenue (USD)"
+            "title":"Total Miner's Revenue (USD)",
+            "format":","
           }
         ]
       }
@@ -86,7 +87,7 @@
         "line" :{"color":"darkred"},
         "color":"brown"
       },
-      "width": 350, 
+      "width": 350,
       "height": 300,
       "encoding": {
         "x": {
@@ -105,14 +106,15 @@
         },
         "tooltip":[
           {
-            "timeUnit": "yearmonth", 
+            "timeUnit": "yearmonth",
             "field": "Timestamp",
             "title":"Month"
           },
           {
-            "aggregate": "sum", 
+            "aggregate": "sum",
             "field": "difficulty",
-            "title":"Mining Difficulty (Total Hashes/s)"
+            "title":"Mining Difficulty (Total Hashes/s)",
+            "format":","
           }
         ]
       }

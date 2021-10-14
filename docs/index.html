@@ -176,10 +176,14 @@
 <script src="./js/modernizr.js"></script>
 <script src="./js/main.js"></script>
 <script type="text/javascript">
-    var specVis1 = "https://raw.githubusercontent.com/SkyGlider/FIT3179-A2/main/jsons/bitcoin_choropleth.json";
-    var specVis2 = "https://raw.githubusercontent.com/SkyGlider/FIT3179-A2/main/jsons/market_cap_isotype.json";
-    var specVis3 = "https://raw.githubusercontent.com/SkyGlider/FIT3179-A2/main/jsons/total_btc.json";
-    var specVis4 = "";
+
+    var specVis1 = "https://raw.githubusercontent.com/SkyGlider/FIT3179-A2/main/jsons/market_cap_isotype.json";
+    var specVis2 = "https://raw.githubusercontent.com/SkyGlider/FIT3179-A2/main/jsons/total_btc.json";
+    var specVis3 = "https://raw.githubusercontent.com/SkyGlider/FIT3179-A2/main/jsons/mining-trends.json";
+    var specVis4 = "https://raw.githubusercontent.com/SkyGlider/FIT3179-A2/main/jsons/mining_share.json";
+    var specVis5 = "https://raw.githubusercontent.com/SkyGlider/FIT3179-A2/main/jsons/trading-volume.json";
+    var specVis6 = "https://raw.githubusercontent.com/SkyGlider/FIT3179-A2/main/jsons/bitcoin_choropleth.json";
+
 
     vegaEmbed('#vis1', specVis1, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -194,6 +198,14 @@
     }).catch(console.error);
 
     vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis5', specVis5, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis6', specVis6, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
