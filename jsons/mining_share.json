@@ -1,0 +1,37 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "https://raw.githubusercontent.com/SkyGlider/FIT3179-A2/main/datasets/miners_county.csv"},
+  "width": 1000, "height": 500,
+  "mark": "area",
+  "encoding": {
+    "x": {
+      "timeUnit": "yearmonth", "field": "date",
+      "axis": {"domain": false, "title":"Month"}
+    },
+    "y": {
+      "aggregate": "sum", "field": "monthly_absolute_hashrate_EH/S",
+      "axis": {"domain": false,"title":"Share of mining operations"},
+      "stack": "normalize"
+    },
+    "color": {"field":"country", "scale":{"scheme": "spectral"}},
+    "tooltip":[
+      {
+        "timeUnit": "yearmonth", 
+        "field": "date",
+        "title":"Month"
+      },
+      {
+        "field":"country",
+        "title":"Country"
+      },
+      {
+        "field": "monthly_absolute_hashrate_EH/S",
+        "title":"Hash Rate (EH/s)"
+      },
+      {
+        "field": "monthly_hashrate_%",
+        "title":"Global Mining Share"
+      }
+    ]
+  }
+}

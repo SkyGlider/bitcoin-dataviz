@@ -1,0 +1,39 @@
+{
+  "data": {"url": "https://raw.githubusercontent.com/SkyGlider/FIT3179-A2/main/miners-revenue.csv"},
+  "title":"BTC Miner's Revenue",
+  "mark": {
+    "type":"area",
+    "line" :{"color":"darkorange"},
+    "color":"orange"
+  },
+  "width": 350, 
+  "height": 300,
+  "encoding": {
+    "x": {
+      "timeUnit": "yearmonth", "field": "Timestamp",
+      "axis": {"domain": false, "title":"Month","grid": false}
+    },
+    "y": {
+      "aggregate": "sum", "field": "miners-revenue",
+      "axis": {
+        "domain": false,
+        "title":"Total Miner's Revenue (USD)",
+        "grid": false,
+        "labelOffset":-5,
+        "labelAlign":"left"
+        }
+    },
+    "tooltip":[
+      {
+        "timeUnit": "yearmonth", 
+        "field": "Timestamp",
+        "title":"Month"
+      },
+      {
+        "aggregate": "sum", 
+        "field": "miners-revenue",
+        "title":"Total Miner's Revenue (USD)"
+      }
+    ]
+  }
+}

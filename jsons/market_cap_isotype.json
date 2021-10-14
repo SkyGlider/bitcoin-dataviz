@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 1000,
+  "height": 500,
+  "data": {
+    "url":"https://raw.githubusercontent.com/SkyGlider/FIT3179-A2/main/datasets/marketcap_vega.csv"
+  },
+  "transform": [
+    {
+      "calculate": "{'coin': '💰'}[datum.type]",
+      "as": "emoji"
+    },
+    {"window": [{"op": "rank", "as": "rank"}], "groupby": ["coin"]}
+  ],
+  "mark": {"type": "text", "baseline": "middle"},
+  "encoding": {
+    "x": {"field": "rank", "type": "ordinal", "axis": null},
+    "y": {"field": "coin", "type": "nominal", "title":"Cryptocurrencies","sort": null},
+    "text": {"field": "emoji", "type": "nominal"},
+    "size": {"value": 30},
+    "tooltip": [
+      {
+        "field": "name",
+        "type": "nominal",
+        "title": "Cryptocurrency Name"
+      },
+      {
+        "field": "coin",
+        "type": "nominal",
+        "title": "Symbol"
+      },
+      {
+        "field": "marketcap",
+        "type": "nominal",
+        "title": "Market Cap (Oct 2021)"
+      },
+      {
+        "field": "supply",
+        "type": "nominal",
+        "title": "Total Supply (Oct 2021)"
+      },
+      {
+        "field": "price",
+        "type": "nominal",
+        "title": "Price (Oct 2021)"
+      }
+    ]
+  },
+  "config": {
+    "view": {"stroke": ""},
+    "axisY": {
+      "offset": 10
+    }
+  }
+}
