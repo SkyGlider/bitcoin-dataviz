@@ -1,0 +1,76 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+      "url": "https://raw.githubusercontent.com/SkyGlider/FIT3179-A2/main/coin_Bitcoin.csv"
+  },
+  "width": 1000,
+  "height":500,
+  "title": "Daily Trading Volume of BTC",
+  "config": {
+      "view": {
+          "strokeWidth": 0,
+          "step": 13
+      },
+      "axis": {
+          "domain": false
+      }
+  },
+  "mark": "rect",
+  "encoding": {
+      "x": {
+          "field": "Date",
+          "timeUnit": "date",
+          "type": "ordinal",
+          "title": "Date",
+          "axis": {
+              "labelAngle": 0,
+              "format": "%e"
+          }
+      },
+      "y": {
+          "field": "Date",
+          "timeUnit": "month",
+          "type": "ordinal",
+          "title": "Month"
+      },
+      "color": {
+          "field": "Volume",
+          "type": "quantitative",
+          "legend": {
+              "title": "No. of BTC Traded"
+          },
+          "scale":{"scheme": "yelloworangebrown"}
+      },
+      "tooltip":[
+        {
+          "field": "Date",
+          "timeUnit": "monthdate",
+          "title":"Date"
+        },
+        {
+          "field": "Volume",
+          "type": "quantitative",
+          "title":"BTC Volume",
+          "format":","
+        }
+      ]
+  },
+    "params": [
+        {
+            "name": "Year",
+            "value": 2020,
+            "bind": {
+                "input": "range",
+                "min": 2014,
+                "max": 2020,
+                "step": 1,
+                "name": "Select year: "
+            }
+        }
+    ],
+    "transform": [
+        {
+            "filter": "datum.Year==Year"
+        }
+    ]
+}
