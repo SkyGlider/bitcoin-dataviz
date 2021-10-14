@@ -1,0 +1,63 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Percantage of Crypto Owners Around The World",
+  "width": 1050,
+  "height": 500,
+  "data": {
+    "url": "https://raw.githubusercontent.com/KaneSec/vega_lite/main/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
+    "format": {
+      "type": "topojson",
+      "feature": "ne_110m_admin_0_countries"
+    }
+  },
+  "transform": [
+    {
+      "lookup": "properties.NAME",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/SkyGlider/FIT3179-A2/main/datasets/dataset_latlong.csv"
+        },
+        "key": "country",
+        "fields": [
+          "percentage", "crypto_owners"
+        ]
+      }
+    },
+    {
+      "calculate": "datum.percentage * 1",
+      "as": "Percentage"
+    }
+  ],
+  "mark": {
+    "type": "geoshape",
+    "stroke": "#FFFFFF",
+    "strokeWidth": 0.5
+  },
+  "encoding": {
+    "color": {
+      "field": "Percentage",
+      "type": "quantitative",
+      "scale": {
+        "type": "threshold",
+        "domain": [0.001, 2.5, 5, 7.5, 10],
+        "range": ["#E9EEE7", "#FFECAD", "#FFD85A","#FFC300","#CC9C00", "#8F6E00"]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "country",
+        "type": "nominal",
+        "title": "Country"
+      },
+      {
+        "field": "crypto_owners",
+        "type": "quantitative",
+        "format":","
+      },
+      {
+        "field": "Percentage",
+        "type": "quantitative"
+      }
+    ]
+  }
+}
