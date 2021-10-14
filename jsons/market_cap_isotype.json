@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 1000,
   "height": 500,
-  "title":"Market Cap Comparison of Different Cryptocurrencies",
+  "title":"Top 10 Cryptocurrencies by Market Capitalization",
   "data": {
     "url":"https://raw.githubusercontent.com/SkyGlider/FIT3179-A2/main/datasets/marketcap_vega.csv"
   },
