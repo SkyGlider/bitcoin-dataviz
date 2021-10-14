@@ -33,7 +33,7 @@
       {
         "field": "marketcap",
         "type": "quantitative",
-        "title": "Market Cap (Oct 2021)",
+        "title": "Market Cap (USD)",
         "format":","
       },
       {
