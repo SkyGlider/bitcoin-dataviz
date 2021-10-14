@@ -1,0 +1,61 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/SkyGlider/FIT3179-A2/main/datasets/combined-output.csv",
+    "format": {"parse": {"date": "date"}}
+  },
+
+  "repeat": {"column": ["Cost per transaction (USD)", "Mining Difficulty (Hash/S)", "Miner Revenue (USD)"]},
+  "spec": {
+    "width":350,
+    "height":300,
+    "layer": [{
+      "params": [{
+        "name": "brush",
+        "select": {"type": "interval", "encodings": ["x"]}
+      }],
+
+      "mark": {"type": "area", "color": "gold"},
+      "encoding": {
+        "x": {
+          "timeUnit": "yearmonth", "field": "date",
+          "type":"temporal",
+          "axis": {"domain": false, "title":"Month","grid": false,"labelAngle":45},
+          "scale": {"domain": [{"year":2014}, {"year":2021}]}
+        },
+        "y": {
+          "field": {"repeat": "column"},
+          "aggregate": "average",
+          "axis": {
+            "domain": false,
+            "title":"Cost Per Transaction (USD)",
+            "grid": false,
+            "labelOffset":-5,
+            "labelAlign":"left"
+            }},
+        "tooltip":[
+          {
+            "timeUnit": "yearmonth",
+            "field": "date",
+            "title":"Month"
+          },
+          {
+            "aggregate": "average",
+            "field": {"repeat": "column"}
+          }
+        ]
+      }
+    }, {
+      "transform": [{"filter": {"param": "brush"}}],
+      "mark": {"type": "area", "color": "goldenrod"},
+      "encoding": {
+        "x": {
+          "timeUnit": "yearmonth", "field": "date",
+          "type":"temporal",
+          "scale": {"domain": [{"month": "Jan","year":2010}, {"month": "Sep","year":2021}]}
+        },
+        "y": {"field": {"repeat": "column"}, "aggregate": "average"}
+      }
+    }]
+  }
+}
