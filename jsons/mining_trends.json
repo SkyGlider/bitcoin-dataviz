@@ -54,7 +54,18 @@
           "type":"temporal",
           "scale": {"domain": [{"month": "Jan","year":2010}, {"month": "Sep","year":2021}]}
         },
-        "y": {"field": {"repeat": "column"}, "aggregate": "average"}
+        "y": {"field": {"repeat": "column"}, "aggregate": "average"},
+        "tooltip":[
+          {
+            "timeUnit": "yearmonth",
+            "field": "date",
+            "title":"Month"
+          },
+          {
+            "aggregate": "average",
+            "field": {"repeat": "column"}
+          }
+        ]
       }
     }]
   }
