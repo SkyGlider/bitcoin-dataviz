@@ -3,7 +3,7 @@
   "data": {
       "url": "https://raw.githubusercontent.com/SkyGlider/FIT3179-A2/main/datasets/coin_Bitcoin.csv"
   },
-  "width": 1000,
+  "width": "container",
   "height":500,
   "title": "Daily Trading Volume of BTC",
   "config": {

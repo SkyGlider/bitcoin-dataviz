@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Percantage Share of Global Bitcoin Mining Capacity (by Country)",
   "data": {"url": "https://raw.githubusercontent.com/SkyGlider/FIT3179-A2/main/datasets/miners_county.csv"},
-  "width": 1000,
+  "width": "container",
   "height": 500,
   "layer":[{
 
