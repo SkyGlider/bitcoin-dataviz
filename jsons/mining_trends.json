@@ -28,7 +28,6 @@
           "aggregate": "average",
           "axis": {
             "domain": false,
-            "title":"Cost Per Transaction (USD)",
             "grid": false,
             "labelOffset":-5,
             "labelAlign":"left"

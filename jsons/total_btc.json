@@ -18,7 +18,7 @@
       "mark": {
         "type": "area",
         "color":"#FDA123",
-        "opacity":0.9
+        "opacity":1
 
       }
     },
