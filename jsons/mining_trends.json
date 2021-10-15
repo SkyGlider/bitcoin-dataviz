@@ -7,7 +7,7 @@
 
   "repeat": {"column": ["Cost per transaction (USD)", "Mining Difficulty (Hash/S)", "Miner Revenue (USD)"]},
   "spec": {
-    "width":350,
+    "width":340,
     "height":300,
     "layer": [{
       "params": [{
