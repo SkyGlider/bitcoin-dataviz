@@ -46,7 +46,7 @@
             "mark": {"type": "circle", "color":"darkred"}
           }, {
             "mark": {"type": "text", "align": "left", "dx": 4,"color":"darkred"},
-            "encoding": {"text": {"field":"text", "type": "nominal"}}
+            "encoding": {"text": {"field":"text", "type": "nominal"},"tooltip":[]}
           }]
         }
       ]
