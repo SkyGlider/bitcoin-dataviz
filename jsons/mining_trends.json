@@ -6,7 +6,7 @@
   },
   "title":"BTC Mining Metrics",
 
-  "repeat": {"column": ["Cost per transaction (USD)", "Mining Difficulty (Hash/S)", "Miner Revenue (USD)"]},
+  "repeat": {"column": ["Cost per transaction (USD)", "Mining Difficulty (Hash/S)", "Miner Daily Revenue (USD)"]},
   "spec": {
     "width":340,
     "height":300,
@@ -30,7 +30,9 @@
           },
           {
             "aggregate": "average",
-            "field": {"repeat": "column"}
+            "field": {"repeat": "column"},
+            "type":"quantitative",
+            "format":","
           }
         ]
       },
@@ -50,7 +52,7 @@
       ]
     }, {
       "transform": [{"filter": {"param": "brush"}}],
-      "mark": {"type": "area", "color": "goldenrod"},
+      "mark": {"type": "area", "color": "#FDA123"},
       "encoding": {
         "x": {
           "timeUnit": "yearmonth", "field": "date",
@@ -71,7 +73,9 @@
           },
           {
             "aggregate": "average",
-            "field": {"repeat": "column"}
+            "field": {"repeat": "column"},
+            "type":"quantitative",
+            "format":","
           }
         ]
       }
