@@ -4,13 +4,18 @@
     "url": "https://raw.githubusercontent.com/SkyGlider/FIT3179-A2/main/datasets/combined-output.csv",
     "format": {"parse": {"date": "date"}}
   },
-  "title":"BTC Mining Metrics",
 
   "repeat": {"column": ["Cost per transaction (USD)", "Mining Difficulty (Hash/S)", "Miner Revenue (USD)"]},
   "spec": {
     "width":340,
     "height":300,
     "layer": [{
+      "params": [{
+        "name": "brush",
+        "select": {"type": "interval", "encodings": ["x"]}
+      }],
+
+      "mark": {"type": "area", "color": "#FDA123"},
       "encoding": {
         "x": {
           "timeUnit": "yearmonth", "field": "date",
@@ -20,46 +25,10 @@
         },
         "y": {
           "field": {"repeat": "column"},
-          "aggregate": "average"
-          },
-        "tooltip":[
-          {
-            "timeUnit": "yearmonth",
-            "field": "date",
-            "title":"Month"
-          },
-          {
-            "aggregate": "average",
-            "field": {"repeat": "column"}
-          }
-        ]
-      },
-      "layer":[
-        {
-          "mark": {"type": "area", "color": "#FDA123"},
-          "encoding":{
-            "y":{
-              "title":""
-            }
-          },
-          "params": [{
-              "name": "brush",
-              "select": {"type": "interval", "encodings": ["x"]}
-            }]
-        }
-      ]
-    }, {
-      "transform": [{"filter": {"param": "brush"}}],
-      "mark": {"type": "area", "color": "goldenrod"},
-      "encoding": {
-        "x": {
-          "timeUnit": "yearmonth", "field": "date",
-          "type":"temporal",
-          "scale": {"domain": [{"month": "Jan","year":2010}, {"month": "Sep","year":2021}]}
-        },
-        "y": {"field": {"repeat": "column"}, "aggregate": "average",
-        "axis": {
+          "aggregate": "average",
+          "axis": {
             "domain": false,
+            "grid": false,
             "labelOffset":-5,
             "labelAlign":"left"
             }},
@@ -75,7 +44,28 @@
           }
         ]
       }
-    }
-    ]
+    }, {
+      "transform": [{"filter": {"param": "brush"}}],
+      "mark": {"type": "area", "color": "goldenrod"},
+      "encoding": {
+        "x": {
+          "timeUnit": "yearmonth", "field": "date",
+          "type":"temporal",
+          "scale": {"domain": [{"month": "Jan","year":2010}, {"month": "Sep","year":2021}]}
+        },
+        "y": {"field": {"repeat": "column"}, "aggregate": "average"},
+        "tooltip":[
+          {
+            "timeUnit": "yearmonth",
+            "field": "date",
+            "title":"Month"
+          },
+          {
+            "aggregate": "average",
+            "field": {"repeat": "column"}
+          }
+        ]
+      }
+    }]
   }
 }
