@@ -15,7 +15,7 @@
         "axis": {"domain": false,"title":"Share of mining operations"},
         "stack": "normalize"
       },
-      "color": {"field":"country", "scale":{"scheme": "spectral"}},
+      "color": {"field":"country", "scale":{"scheme": "inferno"}},
       "tooltip":[
         {
           "timeUnit": "yearmonth",

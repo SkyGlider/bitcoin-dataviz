@@ -15,7 +15,7 @@
         "select": {"type": "interval", "encodings": ["x"]}
       }],
 
-      "mark": {"type": "area", "color": "gold"},
+      "mark": {"type": "area", "color": "#FDA123"},
       "encoding": {
         "x": {
           "timeUnit": "yearmonth", "field": "date",
