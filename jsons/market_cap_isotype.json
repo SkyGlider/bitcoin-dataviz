@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": "container",
+  "width": 1050,
   "height": 500,
   "title":"Top 10 Cryptocurrencies by Market Capitalization",
   "data": {
