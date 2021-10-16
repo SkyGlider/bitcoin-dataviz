@@ -106,16 +106,38 @@
               {
                 "field": "crypto_owners",
                 "type": "quantitative",
+                "title": "No. of crypto owners",
                 "format":","
               },
               {
                 "field": "Percentage",
+                "title": "Percentage of crypto owners",
                 "type": "quantitative"
               }
             ]
           }
-
-
+        },
+        {
+          "projection": {
+            "type": "equirectangular",
+            "center":  {"expr": "center_to"},
+            "scale": {"expr": "zoom_level"}
+          },
+          "mark": {
+            "type": "text"
+          },
+          "encoding": {
+            "text": {"field": "country", "type": "nominal"},
+            "longitude": {"field": "longitude", "type": "quantitative"},
+            "latitude": {"field": "latitude", "type": "quantitative"},
+            "opacity": {
+              "condition": {
+                "test": "datum.country == 'Venezuela'||datum.country == 'Malaysia'||datum.country == 'Australia'",
+                "value": 1
+              },
+              "value": 0
+            }
+          }
         }
       ]
     }
