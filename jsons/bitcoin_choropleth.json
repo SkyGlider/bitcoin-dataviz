@@ -3,13 +3,55 @@
   "title": "Percantage of Crypto Owners Around The World",
   "width": 1050,
   "height": 500,
+  "params":[
+    {
+      "name": "zoom_level", "value": 150,
+      "bind": {"input": "range", "min": 150, "max": 1000, "step": 50, "name": "Zoom Level"}
+    },
+    {
+      "name": "center_to",
+      "bind": {
+        "input": "select",
+        "options":[
+          [0, 0],
+          [-100, 35],
+          [-60, -15],
+          [15, 55],
+          [26, 32],
+          [22, -15],
+          [50,45],
+          [120,45],
+          [120,0],
+          [135,-30]
+        ],
+        "labels": [
+          "Default",
+          "Northern America",
+          "Southern America",
+          "Europe",
+          "Northern Africa",
+          "Southern Africa",
+          "West Asia",
+          "East Asia",
+          "Southeast Asia",
+          "Oceania"
+        ],
+        "name": "Region Center"
+      }
+    }
+  ],
   "layer":[
     {
       "data": {
         "url": "https://raw.githubusercontent.com/KaneSec/vega_lite/main/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
         "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
       },
-      "mark": {"type": "geoshape", "fill": "#E9EEE7"}
+      "mark": {"type": "geoshape", "fill": "#E9EEE7"},
+          "projection": {
+            "type": "equirectangular",
+            "center":  {"expr": "center_to"},
+            "scale": {"expr": "zoom_level"}
+          }
     },
     {
       "data": {
@@ -31,11 +73,15 @@
           "as": "Percentage"
         }
       ],
+
+
       "layer": [
         {
           "mark": {"type": "geoshape", "stroke": "#FFFFFF", "strokeWidth": 0.5},
           "projection": {
-            "type": "equirectangular"
+            "type": "equirectangular",
+            "center":  {"expr": "center_to"},
+            "scale": {"expr": "zoom_level"}
           },
           "encoding": {
             "shape": {
@@ -68,6 +114,8 @@
               }
             ]
           }
+
+
         }
       ]
     }
