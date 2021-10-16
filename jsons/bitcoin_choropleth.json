@@ -2,11 +2,11 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Percantage of Crypto Owners Around The World",
   "width": 1200,
-  "height": 700,
+  "height": 600,
   "params":[
     {
-      "name": "zoom_level", "value": 150,
-      "bind": {"input": "range", "min": 150, "max": 1000, "step": 50, "name": "Zoom Level"}
+      "name": "zoom_level", "value": 190,
+      "bind": {"input": "range", "min": 200, "max": 1000, "step": 50, "name": "Zoom Level"}
     },
     {
       "name": "center_to",
