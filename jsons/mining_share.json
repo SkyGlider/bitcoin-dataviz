@@ -9,14 +9,14 @@
     "encoding": {
       "x": {
         "timeUnit": "yearmonth", "field": "date",
-        "axis": {"domain": false, "title":"Month"}
+        "axis": {"domain": false, "title":"Month of Year"}
       },
       "y": {
         "aggregate": "sum", "field": "monthly_absolute_hashrate_EH/S",
         "axis": {"domain": false,"title":"Share of mining operations"},
         "stack": "normalize"
       },
-      "color": {"field":"country", "scale":{"scheme": "inferno"}},
+      "color": {"field":"country", "scale":{"scheme": "inferno"},"title":"Country Filter"},
       "tooltip":[
         {
           "timeUnit": "yearmonth",
