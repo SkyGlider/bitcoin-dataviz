@@ -4,7 +4,7 @@
     "url": "https://raw.githubusercontent.com/SkyGlider/FIT3179-A2/main/datasets/combined-output.csv",
     "format": {"parse": {"date": "date"}}
   },
-  "title":"BTC Mining Metrics",
+  "title":"Bitcoin Mining Metrics",
 
   "repeat": {"column": ["Cost per transaction (USD)", "Mining Difficulty (Hash/S)", "Miner Daily Revenue (USD)"]},
   "spec": {

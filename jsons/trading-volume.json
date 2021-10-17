@@ -5,7 +5,7 @@
   },
   "width": 1120,
   "height":500,
-  "title": "Daily Trading Volume of BTC",
+  "title": "Daily Trading Volume of Bitcoin",
   "config": {
       "view": {
           "strokeWidth": 0,
