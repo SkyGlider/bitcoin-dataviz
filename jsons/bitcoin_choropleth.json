@@ -92,7 +92,7 @@
               "type": "quantitative",
               "scale": {
                 "type": "threshold",
-                "domain": [2.5, 5, 7.5, 10],
+                "domain": [1, 4, 7, 9],
                 "range": ["#FFECAD", "#fedc63","#FFC300","#FDA123", "#A93D03"]
               }
             },
