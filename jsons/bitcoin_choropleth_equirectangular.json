@@ -5,8 +5,8 @@
   "height": 600,
   "params":[
     {
-      "name": "zoom_level", "value": 230,
-      "bind": {"input": "range", "min": 230, "max": 1000, "step": 50, "name": "Zoom Level"}
+      "name": "zoom_level", "value": 190,
+      "bind": {"input": "range", "min": 190, "max": 1000, "step": 50, "name": "Zoom Level"}
     },
     {
       "name": "center_to",
@@ -48,7 +48,7 @@
       },
       "mark": {"type": "geoshape", "fill": "#E9EEE7"},
           "projection": {
-            "type": "equalEarth",
+            "type": "equirectangular",
             "center":  {"expr": "center_to"},
             "scale": {"expr": "zoom_level"}
           }
@@ -78,7 +78,7 @@
         {
           "mark": {"type": "geoshape", "stroke": "#FFFFFF", "strokeWidth": 0.5},
           "projection": {
-            "type": "equalEarth",
+            "type": "equirectangular",
             "center":  {"expr": "center_to"},
             "scale": {"expr": "zoom_level"}
           },
@@ -118,7 +118,7 @@
         },
         {
           "projection": {
-            "type": "equalEarth",
+            "type": "equirectangular",
             "center":  {"expr": "center_to"},
             "scale": {"expr": "zoom_level"}
           },
