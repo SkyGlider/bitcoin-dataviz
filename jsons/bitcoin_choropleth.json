@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Percantage of Crypto Owners Around The World, October 2021",
+  "title": "Percentage of Crypto Owners Around The World, October 2021",
   "width": 1150,
   "height": 600,
   "params":[
