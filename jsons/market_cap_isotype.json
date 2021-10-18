@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 1050,
   "height": 500,
-  "title":"Top 10 Cryptocurrencies by Market Capitalization",
+  "title":"Top 10 Cryptocurrencies by Market Capitalization, October 2021",
   "data": {
     "url":"https://raw.githubusercontent.com/SkyGlider/FIT3179-A2/main/datasets/marketcap_vega.csv"
   },
