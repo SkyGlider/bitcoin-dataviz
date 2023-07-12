@@ -2,7 +2,7 @@
 This is a Data Visualization about the statistics on Bitcoin using vegaspro.
 
 ## View 
-View the visualisation at https://skyglider.github.io/3179wk10/](https://skyglider.github.io/FIT3179-A2/
+View the visualisation at https://skyglider.github.io/FIT3179-A2/
 
 ## Contributing
 
